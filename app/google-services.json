@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "356961793444",
+    "firebase_url": "https://pushalarm-71f16.firebaseio.com",
+    "project_id": "pushalarm-71f16",
+    "storage_bucket": "pushalarm-71f16.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:356961793444:android:5ff589dd75f45245407d31",
+        "android_client_info": {
+          "package_name": "com.social.pushalarm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "356961793444-i4jm2rt08ar2r8ttprtepvn3fqe9731h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.social.pushalarm",
+            "certificate_hash": "cbede28e156b4f1cb99dfe66b7b040ea135e4b8b"
+          }
+        },
+        {
+          "client_id": "356961793444-fb34m51usmnmhtl6omk5kskasqm0nb1r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaH-p3nC-vQT1DSEEPGVp_T9Ce0MpBUbA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "356961793444-fb34m51usmnmhtl6omk5kskasqm0nb1r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
