@@ -53,7 +53,7 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private static final int RC_SIGN_IN = 1001;
     private static final String FCM_MESSAGE_URL = "https://fcm.googleapis.com/fcm/send";
-    private static final String SERVER_KEY = "AAAAgGoRvj8:................";
+    private static final String SERVER_KEY = "AAAAUxyUtaQ:APA91bG2EAlH6mTzQEzBCWfFGXaov4UyHn4sC623Hmg1PEisdYQEERX1wjC721r4xa-mc23vqB8i4WGyMXDznpWXnzrIOG3-GKP4_KcI9ahmp5acGBki_B88qAf9SC0bRyW9P3j1-NJq";
 
     // Firebase - Realtime Database
     private FirebaseDatabase mFirebaseDatabase;
