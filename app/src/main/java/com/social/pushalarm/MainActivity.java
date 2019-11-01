@@ -66,8 +66,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private GoogleApiClient mGoogleApiClient;
 
     // Views
-    private ListView mListView;
-    private EditText mEdtMessage;
+    private ListView mListView; //채팅메세지 표시하는 리스트뷰
+    private EditText mEdtMessage; //채팅메세지 입력하는 뷰
     private SignInButton mBtnGoogleSignIn; // 로그인 버튼
     private Button mBtnGoogleSignOut; // 로그아웃 버튼
     private TextView mTxtProfileInfo; // 사용자 정보 표시
@@ -119,10 +119,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mEdtMessage = (EditText) findViewById(R.id.edit_message);
         findViewById(R.id.btn_send).setOnClickListener(this);
 
-        mBtnGoogleSignIn = (SignInButton) findViewById(R.id.btn_google_signin);
-        mBtnGoogleSignOut = (Button) findViewById(R.id.btn_google_signout);
-        mBtnGoogleSignIn.setOnClickListener(this);
-        mBtnGoogleSignOut.setOnClickListener(this);
+//        mBtnGoogleSignIn = (SignInButton) findViewById(R.id.btn_google_signin);
+//        mBtnGoogleSignOut = (Button) findViewById(R.id.btn_google_signout);
+//        mBtnGoogleSignIn.setOnClickListener(this);
+//        mBtnGoogleSignOut.setOnClickListener(this);
 
         mTxtProfileInfo = (TextView) findViewById(R.id.txt_profile_info);
         mImgProfile = (ImageView) findViewById(R.id.img_profile);
@@ -200,7 +200,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void updateProfile() {
-        FirebaseUser user = mAuth.getCurrentUser();
+ /*       FirebaseUser user = mAuth.getCurrentUser();
         if (user == null) {
             // 비 로그인 상태 (메시지를 전송할 수 없다.)
             mBtnGoogleSignIn.setVisibility(View.VISIBLE);
@@ -234,8 +234,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             mFirebaseDatabase.getReference("users").child(userData.userEmailID).setValue(userData);
         }
+*/
     }
-
+    public class UserData {
+        public String userEmailID; // email 주소에서 @ 이전까지의 값.
+        public String fcmToken;
+    }
     private void signIn() {
         Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
         startActivityForResult(signInIntent, RC_SIGN_IN);
@@ -357,17 +361,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     chatData.userName = userName;
                     chatData.message = message;
                     chatData.time = System.currentTimeMillis();
-                    chatData.userEmail = mAuth.getCurrentUser().getEmail(); // 사용자 이메일 주소
-                    chatData.userPhotoUrl = mAuth.getCurrentUser().getPhotoUrl().toString(); // 사용자 프로필 이미지 주소
+//                    chatData.userEmail = mAuth.getCurrentUser().getEmail(); // 사용자 이메일 주소
+//                    chatData.userPhotoUrl = mAuth.getCurrentUser().getPhotoUrl().toString(); // 사용자 프로필 이미지 주소
                     mDatabaseReference.push().setValue(chatData);
                 }
                 break;
-            case R.id.btn_google_signin:
+/*            case R.id.btn_google_signin:
                 signIn();
                 break;
             case R.id.btn_google_signout:
                 signOut();
                 break;
+*/
         }
     }
 }
